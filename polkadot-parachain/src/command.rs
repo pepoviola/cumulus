@@ -133,6 +133,9 @@ fn load_spec(id: &str) -> std::result::Result<Box<dyn ChainSpec>, String> {
 		"shell" => Box::new(chain_spec::shell::get_shell_chain_spec()),
 		"seedling" => Box::new(chain_spec::seedling::get_seedling_chain_spec()),
 
+		// -- sub0 (just statemint)
+		"sub-zero-local" => Box::new(chain_spec::statemint::statemint_local_config()),
+
 		// -- Statemint
 		"statemint-dev" => Box::new(chain_spec::statemint::statemint_development_config()),
 		"statemint-local" => Box::new(chain_spec::statemint::statemint_local_config()),
